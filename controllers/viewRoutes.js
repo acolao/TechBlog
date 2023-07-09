@@ -16,7 +16,7 @@ router.get('/', withAuth, async (res, req) => {
 
 router.get('/post/:id', withAuth, async (req, res) => {
     try {
-        const postData = await.findbyPk(req.params.id, { include: [User] })
+        const postData = await findbyPk(req.params.id, { include: [User] })
 
         if(!postData) {
             res.status(404).end()
