@@ -4,6 +4,6 @@ const apiRoutes = require('./api')
 const viewRoutes = require('./viewroutes')
 
 router.use('/', viewRoutes)
-router.use('/', apiRoutes)
+router.use('/api', apiRoutes)
 
 module.exports = router
