@@ -15,7 +15,7 @@ document.getElementById('loginUser').addEventListener('click', async event => {
     document.location.replace('/')
 })
 
-document.getElementById('registerUser').addEventListener('click', event => {
+document.getElementById('registerUser').addEventListener('click', async event => {
     const user = {
         username: document.getElementById('username').value,
         password: document.getElementById('password').value

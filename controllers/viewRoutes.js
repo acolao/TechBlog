@@ -31,7 +31,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 })
 
 router.get('/auth', (req, res) => {
-    if (req.session/loggedIn) {
+    if (req.session.loggedIn) {
         res.redirect('/')
         return
     }

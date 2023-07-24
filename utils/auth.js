@@ -4,7 +4,8 @@ const withAuth = (req, res, next) => {
      //redirects the user to the /auth route or page, indicating that they need to authenticate before proceeding further.
      res.redirect('/auth')
     } else {
-        next()}
+      next()
+    }
     }
     
     module.exports = withAuth

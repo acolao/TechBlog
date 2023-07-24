@@ -8,7 +8,7 @@ const exphbs = require('express-handlebars')
 const app = express()
 const PORT = process.env.PORT || 3001;
 
-const sequelize = require('./config/index')
+const sequelize = require('./config')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 
 app.use(session({
@@ -35,8 +35,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(join(__dirname, 'public')))
 
-app.use(require('./controllers/api'))
+app.use(require('./controllers'))
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
+sequelize.sync({ force: false })
+  .then(() => app.listen(3001))
+  .catch(err => console.error(err))

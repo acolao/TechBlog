@@ -3,7 +3,7 @@ const { Post } = require('../../models')
 const withAuth = require('../../utils/auth')
 
 router.post('/', withAuth, async (req, res) => {
-    try{
+    try {
         const post = await Post.create({ ...req.body, userID: req.session.userId })
         res.json(post)
     } catch (err) {
@@ -18,9 +18,10 @@ router.put('./:id', withAuth, async (req, res) => {
                 id: req.params.id
             }
         })
+        
     if (affectedRows > 0) {
         res.status(200).end()
-    }else {
+    } else {
       res.status(404).end()
     }
   } catch (err) {

@@ -8,7 +8,7 @@ document.getElementById('editPost').addEventListener('click', async event => {
 
     const res = await fetch(`/api/posts/${event.target.dataset.id}`, {
         method: 'PUT',
-        body: JSON.stringify('post'),
+        body: JSON.stringify(post),
         headers: {
             'Content-Type': 'application/json'
         }
