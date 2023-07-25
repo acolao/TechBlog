@@ -29,7 +29,7 @@ router.post('/login', async (req, res) => {
         })
 
         if(!user) {
-            res.status(404).json({ message: 'User not found!'})
+            res.status(400).json({ message: 'User not found!'})
         }
 
         const validPW = user.checkPassword(req.body.password)

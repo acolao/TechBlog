@@ -12,19 +12,13 @@ none
 
 ## Usage
 
-use the link
+The app is deployed on Heroku, please use link below:
+
+https://warm-river-44268-3de431fe6c9c.herokuapp.com/
 
 ## License
 
 MIT
-
-## Contributing
-
-n/a
-
-## Test
-
-n/a
 
 ## Questions
 
